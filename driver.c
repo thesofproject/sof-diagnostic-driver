@@ -34,6 +34,7 @@
  * @PCI_DEVICE_AUDIO_TGL: Tiger Lake
  * @PCI_DEVICE_AUDIO_CML_LP: Comet Lake LP
  * @PCI_DEVICE_AUDIO_CML_H: Comet Lake H
+ * @PCI_DEVICE_AUDIO_JSL: Jasper Lake
  */
 enum pci_device_id_e {
 	PCI_DEVICE_AUDIO_BXT = 0x1C20,
@@ -44,6 +45,7 @@ enum pci_device_id_e {
 	PCI_DEVICE_AUDIO_TGL = 0xA0C8,
 	PCI_DEVICE_AUDIO_CML_LP = 0x02C8,
 	PCI_DEVICE_AUDIO_CML_H = 0x06C8,
+	PCI_DEVICE_AUDIO_JSL = 0x38C8,
 };
 
 /**
@@ -58,6 +60,7 @@ static const unsigned int device_ids[] = {
 	PCI_DEVICE_AUDIO_TGL,
 	PCI_DEVICE_AUDIO_CML_LP,
 	PCI_DEVICE_AUDIO_CML_H,
+	PCI_DEVICE_AUDIO_JSL,
 };
 
 /**
