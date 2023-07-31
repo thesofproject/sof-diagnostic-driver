@@ -3,7 +3,7 @@
 //  This file is provided under a dual BSD/GPLv2 license.  When using or
 //  redistributing this file, you may do so under either license.
 //
-//  Copyright(c) 2019 Intel Corporation. All rights reserved.
+//  Copyright(c) 2019-2023 Intel Corporation. All rights reserved.
 //
 //  Author: Marcin Zielinski <marcinx.zielinski@linux.intel.com>
 //
@@ -38,6 +38,7 @@
  * @PCI_DEVICE_AUDIO_JSL: Jasper Lake
  * @PCI_DEVICE_AUDIO_ADL: Alder Lake
  * @PCI_DEVICE_AUDIO_MTL: Meteor Lake
+ * @PCI_DEVICE_AUDIO_LNL: Lunar Lake
  */
 enum pci_device_id_e {
 	PCI_DEVICE_AUDIO_BXT = 0x1C20,
@@ -52,6 +53,7 @@ enum pci_device_id_e {
 	PCI_DEVICE_AUDIO_JSL = 0x38C8,
 	PCI_DEVICE_AUDIO_ADL = 0x51c8,
 	PCI_DEVICE_AUDIO_MTL = 0x7e28,
+	PCI_DEVICE_AUDIO_LNL = 0xA828,
 };
 
 /**
@@ -70,6 +72,7 @@ static const unsigned int device_ids[] = {
 	PCI_DEVICE_AUDIO_JSL,
 	PCI_DEVICE_AUDIO_ADL,
 	PCI_DEVICE_AUDIO_MTL,
+	PCI_DEVICE_AUDIO_LNL,
 };
 
 /**
