@@ -3,7 +3,7 @@
 //  This file is provided under a dual BSD/GPLv2 license.  When using or
 //  redistributing this file, you may do so under either license.
 //
-//  Copyright(c) 2019 Intel Corporation. All rights reserved.
+//  Copyright(c) 2019-2023 Intel Corporation. All rights reserved.
 //
 //  Author: Marcin Zielinski <marcinx.zielinski@linux.intel.com>
 //
@@ -17,6 +17,7 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/vmalloc.h>
+#include <linux/version.h>
 #include <uapi/linux/fs.h>
 
 /**
@@ -921,7 +922,11 @@ int diagdev_init(void)
 		goto release_chrdev_region;
 	}
 
-	driver.cls = class_create(THIS_MODULE, "diag");
+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 4, 0)
+		driver.cls = class_create("diag");
+	#else
+		driver.cls = class_create(THIS_MODULE, "diag");
+	#endif
 	if (IS_ERR(driver.cls)) {
 		dev_crit(&pci_dev->dev, "unable to create driver class");
 		ret = err_ptr_to_code(driver.cls);
