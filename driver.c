@@ -37,6 +37,7 @@
  * @PCI_DEVICE_AUDIO_CML_H: Comet Lake H
  * @PCI_DEVICE_AUDIO_JSL: Jasper Lake
  * @PCI_DEVICE_AUDIO_ADL: Alder Lake
+ * @PCI_DEVICE_AUDIO_RPL: Raptor Lake
  * @PCI_DEVICE_AUDIO_MTL: Meteor Lake
  */
 enum pci_device_id_e {
@@ -51,6 +52,7 @@ enum pci_device_id_e {
 	PCI_DEVICE_AUDIO_CML_H = 0x06C8,
 	PCI_DEVICE_AUDIO_JSL = 0x38C8,
 	PCI_DEVICE_AUDIO_ADL = 0x51c8,
+	PCI_DEVICE_AUDIO_RPL = 0x51ca,
 	PCI_DEVICE_AUDIO_MTL = 0x7e28,
 };
 
@@ -69,6 +71,7 @@ static const unsigned int device_ids[] = {
 	PCI_DEVICE_AUDIO_CML_H,
 	PCI_DEVICE_AUDIO_JSL,
 	PCI_DEVICE_AUDIO_ADL,
+	PCI_DEVICE_AUDIO_RPL,
 	PCI_DEVICE_AUDIO_MTL,
 };
 
