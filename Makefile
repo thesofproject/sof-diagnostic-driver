@@ -28,5 +28,5 @@ uninstall:
 	-sudo rmmod $(TARGET)
 
 install: driver
-	sudo cp build/$(driver_module) $(KDIR)
+	sudo cp $(driver_module) $(KDIR)
 	sudo insmod $(KDIR)/$(driver_module)
