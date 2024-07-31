@@ -39,7 +39,7 @@ enum diag_dev_kind_t {
 /**
  * MAX_ALLOC_MAPS - Max allocations that can be performed on the driver.
  */
-#define MAX_ALLOC_MAPS 16
+#define MAX_ALLOC_MAPS 32
 
 /**
  * struct diag_mem_map_t - Map of allocations performed on the driver.
